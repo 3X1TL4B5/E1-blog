@@ -1,1 +1,48 @@
 
+
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>E1 Game Journal</name>
+    <version>1.0</version>
+    <description>
+      <![CDATA[A responsive gaming blog skin built with Bootstrap 5, featuring light and dark themes.]]>
+    </description>
+    <license>
+      <![CDATA[Copyright (c) EXITLABS-E1. All rights reserved.]]>
+    </license>
+  </information>
+
+  <author>
+    <name>EXITLABS-E1</name>
+  </author>
+
+  <default>
+    <recentEntries>5</recentEntries>
+    <recentComments>5</recentComments>
+    <recentTrackbacks>5</recentTrackbacks>
+    <itemsOnGuestbook>10</itemsOnGuestbook>
+    <tagsInCloud>30</tagsInCloud>
+    <sortInCloud>3</sortInCloud>
+    <expandComment>0</expandComment>
+    <expandTrackback>0</expandTrackback>
+    <lengthOfRecentNotice>25</lengthOfRecentNotice>
+    <lengthOfRecentEntry>80</lengthOfRecentEntry>
+    <lengthOfRecentComment>30</lengthOfRecentComment>
+    <lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+    <lengthOfLink>30</lengthOfLink>
+    <entriesOnPage>10</entriesOnPage>
+    <entriesOnList>10</entriesOnList>
+    <showListOnCategory>1</showListOnCategory>
+    <showListOnArchive>1</showListOnArchive>
+    <tree>
+      <color>495057</color>
+      <bgColor>ffffff</bgColor>
+      <activeColor>0d6efd</activeColor>
+      <activeBgColor>f1f3f5</activeBgColor>
+      <labelLength>30</labelLength>
+      <showValue>1</showValue>
+    </tree>
+    <contentWidth>900</contentWidth>
+  </default>
+</skin>
