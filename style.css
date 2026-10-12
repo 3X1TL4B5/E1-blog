@@ -543,3 +543,39 @@ button:focus-visible {
   background-color: var(--border) !important;
   color: var(--text) !important;
 }
+
+
+/* Owner Action Buttons */
+.owner-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.owner-action-write {
+  background: var(--primary);
+  color: #fff !important;
+}
+
+.owner-action-admin {
+  border: 1px solid var(--border);
+  color: var(--text) !important;
+}
+
+.owner-action-btn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 991.98px) {
+  .owner-action-btn {
+    margin: 0.25rem 0;
+  }
+}
