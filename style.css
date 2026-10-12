@@ -482,3 +482,28 @@ button:focus-visible {
 .navbar .dropdown-menu .c_cnt {
   display: none;
 }
+
+/* Dropdown theme compatibility */
+.navbar .dropdown-menu {
+  background-color: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.navbar .dropdown-menu .tt_category,
+.navbar .dropdown-menu .tt_category ul,
+.navbar .dropdown-menu .category_list {
+  background-color: transparent !important;
+  color: var(--text);
+}
+
+.navbar .dropdown-menu .tt_category a,
+.navbar .dropdown-menu .category_list a {
+  color: var(--text) !important;
+}
+
+.navbar .dropdown-menu .tt_category a:hover,
+.navbar .dropdown-menu .category_list a:hover {
+  background-color: var(--border) !important;
+  color: var(--text) !important;
+}
