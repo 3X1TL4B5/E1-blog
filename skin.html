@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,19 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
 
-  <title>[##_title_##]</title>
+  <title>[##_page_title_##]</title>
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet"
   >
-
   <link rel="stylesheet" href="./style.css">
 
   [##_head_##]
 </head>
 
-<body>
+<body id="[##_body_id_##]">
 <s_t3>
   <header class="site-header">
     <nav class="navbar navbar-expand-lg">
@@ -49,20 +47,17 @@
               <a class="nav-link" href="[##_blog_link_##]category">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="[##_blog_link_##]tag">Tags</a>
+              <a class="nav-link" href="[##_taglog_link_##]">Tags</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="[##_blog_link_##]guestbook">Guestbook</a>
+              <a class="nav-link" href="[##_guestbook_link_##]">Guestbook</a>
             </li>
             <li class="nav-item ms-lg-2">
               <button
                 class="btn btn-sm theme-toggle"
                 id="themeToggle"
                 type="button"
-                aria-label="Toggle color theme"
-              >
-                ☾ / ☀
-              </button>
+              >☾ / ☀</button>
             </li>
           </ul>
         </div>
@@ -72,7 +67,7 @@
 
   <main class="container blog-container">
     <section class="hero-section">
-      <p class="hero-eyebrow">GAMING • GUIDES • NEWS</p>
+      <p class="hero-eyebrow">GAMING · GUIDES · NEWS</p>
       <h1>[##_title_##]</h1>
       <p class="hero-description">
         게임 공략부터 최신 정보까지, 플레이에 도움이 되는 기록.
@@ -81,47 +76,113 @@
 
     <div class="row g-4">
       <section class="col-lg-8">
-        <div class="section-heading">
-          <h2>Latest Posts</h2>
-          <span class="section-caption">최신 게임 정보</span>
-        </div>
-
+        <!-- Home and article list -->
         <s_article_rep>
-          <article class="post-card">
-            <div class="post-meta">
-              <span>[##_article_rep_category_##]</span>
-              <span>·</span>
-              <time>[##_article_rep_date_##]</time>
-            </div>
+          <s_index_article_rep>
+            <article class="post-card">
+              <div class="post-meta">
+                <a href="[##_article_rep_category_link_##]">
+                  [##_article_rep_category_##]
+                </a>
+                <span>·</span>
+                <time>[##_article_rep_simple_date_##]</time>
+              </div>
 
-            <h3 class="post-title">
-              <a href="[##_article_rep_link_##]">
-                [##_article_rep_title_##]
+              <h2 class="post-title">
+                <a href="[##_article_rep_link_##]">
+                  [##_article_rep_title_##]
+                </a>
+              </h2>
+
+              <div class="post-excerpt">
+                [##_article_rep_summary_##]
+              </div>
+
+              <a class="read-more" href="[##_article_rep_link_##]">
+                Read more →
               </a>
-            </h3>
+            </article>
+          </s_index_article_rep>
 
-            <div class="post-excerpt">
-              [##_article_rep_summary_##]
-            </div>
+          <!-- Individual article page -->
+          <s_permalink_article_rep>
+            <article class="post-card article-detail">
+              <div class="post-meta">
+                <a href="[##_article_rep_category_link_##]">
+                  [##_article_rep_category_##]
+                </a>
+                <span>·</span>
+                <time>[##_article_rep_date_##]</time>
+              </div>
 
-            <a
-              class="read-more"
-              href="[##_article_rep_link_##]"
-            >
-              Read more →
-            </a>
-          </article>
+              <h1 class="post-title">
+                [##_article_rep_title_##]
+              </h1>
+
+              <div class="article-content">
+                [##_article_rep_desc_##]
+              </div>
+            </article>
+          </s_permalink_article_rep>
         </s_article_rep>
 
+        <!-- Category, tag and search results -->
+        <s_list>
+          <div class="section-heading">
+            <h2>Posts</h2>
+            <span class="section-caption">[##_list_conform_##]</span>
+          </div>
+
+          <s_list_rep>
+            <article class="post-card">
+              <div class="post-meta">
+                <span>[##_list_rep_category_##]</span>
+                <span>·</span>
+                <time>[##_list_rep_regdate_##]</time>
+              </div>
+
+              <h2 class="post-title">
+                <a href="[##_list_rep_link_##]">
+                  [##_list_rep_title_##]
+                </a>
+              </h2>
+
+              <div class="post-excerpt">
+                [##_list_rep_summary_##]
+              </div>
+
+              <a class="read-more" href="[##_list_rep_link_##]">
+                Read more →
+              </a>
+            </article>
+          </s_list_rep>
+
+          <s_list_empty>
+            <div class="post-card">
+              아직 등록된 게시글이 없습니다.
+            </div>
+          </s_list_empty>
+        </s_list>
+
+        <!-- Pagination -->
         <s_paging>
           <nav class="pagination-wrap" aria-label="Post pagination">
-            <a href="[##_prev_page_##]" class="page-link-custom">
-              ← Previous
-            </a>
-            <span class="page-number">[##_current_page_##]</span>
-            <a href="[##_next_page_##]" class="page-link-custom">
-              Next →
-            </a>
+            <a
+              [##_prev_page_##]
+              class="page-link-custom [##_no_more_prev_##]"
+            >← Previous</a>
+
+            <s_paging_rep>
+              <a
+                [##_paging_rep_link_##]
+                class="page-link-custom"
+              >[##_paging_rep_link_num_##]</a>
+            </s_paging_rep>
+
+            <a
+              [##_next_page_##]
+              class="page-link-custom [##_no_more_next_##]"
+            >Next →</a>
           </nav>
         </s_paging>
       </section>
@@ -137,8 +198,7 @@
         <section class="sidebar-card">
           <h2>About This Blog</h2>
           <p>
-            게임을 더 재미있게 즐기기 위한 공략,
-            업데이트 소식과 유용한 팁을 정리합니다.
+            게임 공략, 업데이트 소식과 유용한 팁을 정리합니다.
           </p>
         </section>
       </aside>
@@ -158,37 +218,32 @@
 ></script>
 
 <script>
-  (function () {
-    const toggle = document.getElementById("themeToggle");
-    const savedTheme = localStorage.getItem("e1-theme");
-    const prefersDark = window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+(function () {
+  const toggle = document.getElementById("themeToggle");
+  const savedTheme = localStorage.getItem("e1-theme");
+  const prefersDark = window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    function applyTheme(theme) {
-      document.documentElement.setAttribute("data-theme", theme);
-      if (toggle) {
-        toggle.setAttribute(
-          "aria-pressed",
-          String(theme === "dark")
-        );
-      }
-    }
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+  }
 
-    applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
+  applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
 
-    if (toggle) {
-      toggle.addEventListener("click", function () {
-        const current =
-          document.documentElement.getAttribute("data-theme");
-        const next = current === "dark" ? "light" : "dark";
-        localStorage.setItem("e1-theme", next);
-        applyTheme(next);
-      });
-    }
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const current =
+        document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
 
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
-  })();
+      localStorage.setItem("e1-theme", next);
+      applyTheme(next);
+    });
+  }
+
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+})();
 </script>
 </body>
 </html>
