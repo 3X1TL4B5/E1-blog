@@ -1,1 +1,194 @@
 
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>[##_title_##]</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./style.css">
+
+  [##_head_##]
+</head>
+
+<body>
+<s_t3>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="[##_blog_link_##]">
+          E1 GAME JOURNAL
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="[##_blog_link_##]">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="[##_blog_link_##]category">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="[##_blog_link_##]tag">Tags</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="[##_blog_link_##]guestbook">Guestbook</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <button
+                class="btn btn-sm theme-toggle"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle color theme"
+              >
+                ☾ / ☀
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container blog-container">
+    <section class="hero-section">
+      <p class="hero-eyebrow">GAMING • GUIDES • NEWS</p>
+      <h1>[##_title_##]</h1>
+      <p class="hero-description">
+        게임 공략부터 최신 정보까지, 플레이에 도움이 되는 기록.
+      </p>
+    </section>
+
+    <div class="row g-4">
+      <section class="col-lg-8">
+        <div class="section-heading">
+          <h2>Latest Posts</h2>
+          <span class="section-caption">최신 게임 정보</span>
+        </div>
+
+        <s_article_rep>
+          <article class="post-card">
+            <div class="post-meta">
+              <span>[##_article_rep_category_##]</span>
+              <span>·</span>
+              <time>[##_article_rep_date_##]</time>
+            </div>
+
+            <h3 class="post-title">
+              <a href="[##_article_rep_link_##]">
+                [##_article_rep_title_##]
+              </a>
+            </h3>
+
+            <div class="post-excerpt">
+              [##_article_rep_summary_##]
+            </div>
+
+            <a
+              class="read-more"
+              href="[##_article_rep_link_##]"
+            >
+              Read more →
+            </a>
+          </article>
+        </s_article_rep>
+
+        <s_paging>
+          <nav class="pagination-wrap" aria-label="Post pagination">
+            <a href="[##_prev_page_##]" class="page-link-custom">
+              ← Previous
+            </a>
+            <span class="page-number">[##_current_page_##]</span>
+            <a href="[##_next_page_##]" class="page-link-custom">
+              Next →
+            </a>
+          </nav>
+        </s_paging>
+      </section>
+
+      <aside class="col-lg-4">
+        <section class="sidebar-card">
+          <h2>Categories</h2>
+          <div class="category-list">
+            [##_category_list_##]
+          </div>
+        </section>
+
+        <section class="sidebar-card">
+          <h2>About This Blog</h2>
+          <p>
+            게임을 더 재미있게 즐기기 위한 공략,
+            업데이트 소식과 유용한 팁을 정리합니다.
+          </p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="currentYear"></span> E1 Game Journal</p>
+      <p>Made for gamers.</p>
+    </div>
+  </footer>
+</s_t3>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<script>
+  (function () {
+    const toggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("e1-theme");
+    const prefersDark = window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      if (toggle) {
+        toggle.setAttribute(
+          "aria-pressed",
+          String(theme === "dark")
+        );
+      }
+    }
+
+    applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
+
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        const current =
+          document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        localStorage.setItem("e1-theme", next);
+        applyTheme(next);
+      });
+    }
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
