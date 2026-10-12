@@ -1,4 +1,4 @@
-# E1 게임 일지
+## E1 게임 일지
 
 게임 가이드, 뉴스, 팁, 업데이트를 위한 반응형 티스토리 블로그 스킨입니다.
 
@@ -58,8 +58,7 @@ E1-블로그/
 
 저작권 (c) EXITLABS-E1. 무단 전재 금지.
 
-
-# E1 Game Journal
+## E1 Game Journal
 
 A responsive Tistory blog skin for gaming guides, news, tips, and updates.
 
