@@ -43,9 +43,29 @@
             <li class="nav-item">
               <a class="nav-link" href="[##_blog_link_##]">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="[##_blog_link_##]category">Categories</a>
-            </li>
+
+<li class="nav-item dropdown">
+  <a
+    class="nav-link dropdown-toggle"
+    href="#"
+    id="categoriesDropdown"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Categories
+  </a>
+
+  <div
+    class="dropdown-menu"
+    aria-labelledby="categoriesDropdown"
+  >
+    [##_category_list_##]
+  </div>
+</li>
+
+</li>
+
             <li class="nav-item">
               <a class="nav-link" href="[##_taglog_link_##]">Tags</a>
             </li>
@@ -75,7 +95,7 @@
     </section>
 
     <div class="row g-4">
-      <section class="col-lg-8">
+      <section class="col-12">
         <!-- Home and article list -->
         <s_article_rep>
           <s_index_article_rep>
@@ -186,22 +206,6 @@
           </nav>
         </s_paging>
       </section>
-
-      <aside class="col-lg-4">
-        <section class="sidebar-card">
-          <h2>Categories</h2>
-          <div class="category-list">
-            [##_category_list_##]
-          </div>
-        </section>
-
-        <section class="sidebar-card">
-          <h2>About This Blog</h2>
-          <p>
-            게임 공략, 업데이트 소식과 유용한 팁을 정리합니다.
-          </p>
-        </section>
-      </aside>
     </div>
   </main>
 
