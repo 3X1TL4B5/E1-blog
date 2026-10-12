@@ -21,13 +21,12 @@ The blog content will primarily be written in Korean, while navigation and inter
 
 ## Project Structure
 
-```text
 E1-blog/
 ├── index.xml
 ├── skin.html
 ├── style.css
+├── preview.gif
 └── README.md
-```
 
 ## Files
 
@@ -37,6 +36,7 @@ E1-blog/
 | `skin.html` | Blog layout and Tistory template markup |
 | `style.css` | Responsive styling and theme colors |
 | `README.md` | Project documentation |
+| `preview.gif` | Tistory skin preview image |
 
 ## Technology
 
