@@ -1,24 +1,23 @@
 
-
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
   <information>
     <name>E1 Game Journal</name>
-    <version>1.0</version>
-    <description>
-      <![CDATA[A responsive gaming blog skin built with Bootstrap 5, featuring light and dark themes.]]>
-    </description>
-    <license>
-      <![CDATA[Copyright (c) EXITLABS-E1. All rights reserved.]]>
-    </license>
+    <version>1.1</version>
+    <description><![CDATA[
+      A responsive gaming blog skin built with Bootstrap 5,
+      featuring light and dark themes.
+    ]]></description>
+    <license><![CDATA[
+      Copyright (c) EXITLABS-E1. All rights reserved.
+    ]]></license>
   </information>
 
-
-<author>
-  <name>EXITLABS-E1</name>
-  <homepage>https://github.com/EXITLABS-E1/E1-blog</homepage>
-  <email>likku@kakao.com</email>
-</author>
+  <author>
+    <name>EXITLABS-E1</name>
+    <homepage>https://github.com/EXITLABS-E1/E1-blog</homepage>
+    <email>likku@kakao.com</email>
+  </author>
 
   <default>
     <recentEntries>5</recentEntries>
@@ -38,6 +37,17 @@
     <entriesOnList>10</entriesOnList>
     <showListOnCategory>1</showListOnCategory>
     <showListOnArchive>1</showListOnArchive>
+
+    <commentMessage>
+      <none>댓글이 없습니다.</none>
+      <single>댓글 &lt;span class="cnt"&gt;하나&lt;/span&gt; 달렸습니다.</single>
+    </commentMessage>
+
+    <trackbackMessage>
+      <none>받은 트랙백이 없습니다.</none>
+      <single>트랙백이 &lt;span class="cnt"&gt;하나&lt;/span&gt;이고</single>
+    </trackbackMessage>
+
     <tree>
       <color>495057</color>
       <bgColor>ffffff</bgColor>
@@ -46,6 +56,7 @@
       <labelLength>30</labelLength>
       <showValue>1</showValue>
     </tree>
+
     <contentWidth>900</contentWidth>
   </default>
 </skin>
